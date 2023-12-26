@@ -52,7 +52,7 @@ PortCity CMS is built with modern frontend technologies to provide a seamless an
 
 ## Reporting Issues 🐛
 
-If you encounter any issues, bugs, or have general questions, please feel free to use our [issue templates](.github/ISSUE_TEMPLATE).
+If you encounter any issues, bugs, or have general questions, please feel free to use our [issue templates](https://github.com/dsrathore1/Portcity-CMS/issues/new/choose).
 
 We appreciate your feedback and will work to address any problems promptly.
 
