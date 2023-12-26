@@ -1,5 +1,5 @@
 {
-  "name": "@ur-craze/backend",
+  "name": "@dsrathore1/backend",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@dsrathore1/frontend": "*",
     "axios": "^1.6.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
