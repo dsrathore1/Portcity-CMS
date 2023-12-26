@@ -1,0 +1,15 @@
+{
+    "name":"@dsrathore1/backend",
+    "builds": [
+        {
+            "src":"main.js",
+            "use":"@vercel/node"
+        }
+    ],
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"/main.js"
+        }
+    ]
+}
