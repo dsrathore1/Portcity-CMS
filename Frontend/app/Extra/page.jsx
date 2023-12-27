@@ -35,7 +35,6 @@ const Extra = () => {
 
     return (
         <div className='ml-[16rem] text-gray-300'>
-            Hello
             {
                 data && data.map((data, index) => {
                     const id = data._id;

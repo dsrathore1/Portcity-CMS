@@ -2,13 +2,14 @@ import React from "react";
 
 
 const more_projects = () => {
+    
     return (
         <>
             <div className="h-screen w-full pl-[15rem] flex justify-center items-center">
                 <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
                     <h2 className="text-3xl font-semibold text-gray-700 capitalize dark:text-white">More Projects 🚀</h2>
 
-                    <form>
+                    <form action="" method="POST">
                         <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                             <div>
                                 <label className="text-gray-700 dark:text-gray-200" htmlFor="username">Project Name</label>

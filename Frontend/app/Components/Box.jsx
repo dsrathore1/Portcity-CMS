@@ -5,7 +5,7 @@ import Image from "next/image";
 import { AiFillDelete } from "react-icons/ai"
 import { HiPencil } from "react-icons/hi"
 
-const Box = ({ image_name, project_name, project_techs }) => {
+const Box = ({ image_name, project_name, project_techs, id }) => {
     return (
         <>
             <div className='bg-[#ebebeb] h-[22rem] w-[20rem] rounded-xl relative'>
@@ -17,7 +17,7 @@ const Box = ({ image_name, project_name, project_techs }) => {
                         <button onClick={() => { window.alert("You clicked edit button") }}>
                             <HiPencil className='text-gray-600 text-2xl cursor-pointer active:translate-y-1 transition-all ease-in-out duration-500 drop-shadow-xl' />
                         </button>
-                        <button onClick={() => { window.alert("You clicked delete button") }}>
+                        <button onClick={() => { window.alert(id) }}>
                             <AiFillDelete className='text-red-500 text-2xl cursor-pointer active:translate-y-1 transition-all ease-in-out duration-500 drop-shadow-xl' />
                         </button>
                     </div>
