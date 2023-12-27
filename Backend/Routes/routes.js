@@ -1,23 +1,23 @@
 import { Router } from "express";
-import { addProject, deleteAllProjects, deleteOne, getAllTopProjects, updateProject, getOneData } from "../Controller/controllers.js";
-import { addMoreProject, deleteAll, getMoreProjects, updateOne, getOneProject } from "../Controller/controller2.js";
+import { addProject, deleteAllProjects, deleteOne, getAllTopProjects, updateProject, getOneData } from "../Controller/tp_controller.js";
+import { addMoreProject, deleteAllMoreProjects, getAllMoreProjects, updateOne, getOneMp } from "../Controller/mp_controller.js";
 
 const routes = Router();
 
 //! Get Top Project API
 routes.get("/topProjects", getAllTopProjects);
-routes.get("/findOne/:id", getOneData);
+routes.get("/topProjects/findOne/:id", getOneData);
 routes.post("/topProjects", addProject);
-routes.put("/updateProject/:id", updateProject);
-routes.delete("/deleteAll", deleteAllProjects);
-routes.delete("/delete/:id", deleteOne);
+routes.put("/topProjects/updateProject/:id", updateProject);
+routes.delete("/topProjects/deleteAll", deleteAllProjects);
+routes.delete("/topProjects/deleteOneTp/:id", deleteOne);
 
 
 //! Get More project API
-routes.get("/moreProjects", getMoreProjects);
+routes.get("/moreProjects", getAllMoreProjects);
+routes.get("/moreProjects/getOneMp/:id", getOneMp);
 routes.post("/moreProjects", addMoreProject);
-routes.delete("/deleteMP", deleteAll);
-routes.put("/updateOne/:_id", updateOne);
-routes.get("/getOneProject/:id", getOneProject);
+routes.put("/moreProjects/updateOneMp/:id", updateOne);
+routes.delete("/moreProjects/deleteAllMp", deleteAllMoreProjects);
 
 export default routes;
