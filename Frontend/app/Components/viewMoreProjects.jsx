@@ -22,11 +22,6 @@ export default function ViewMP() {
             });
     }
 
-    const deleteData = async () => {
-        const id =
-            await fetch("http://localhost:3001/deleteOne/")
-    }
-
     useEffect(() => {
         getData();
     }, []);
@@ -39,12 +34,8 @@ export default function ViewMP() {
                     {
                         data.map((data, index) => {
                             const id = data._id;
-                            const tech = data.usedTech;
-                            const techs = tech.join(", ");
                             return (
-                                <>
-                                    <Box key={index} id={id} image_name={NetflixClone} project_name={data.projectName} project_techs={techs} />
-                                </>
+                                <Box key={index} id={id} image_name={NetflixClone} project_name={data.projectName} project_techs={data.usedTech} />
                             );
                         })
                     }
