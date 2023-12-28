@@ -2,9 +2,10 @@ import mongoose from "mongoose";
 
 const Schema = await mongoose.Schema(
     {
-        projectName: String,
-        usedTech: Array,
-        gitHubLink: String
+        projectName: { type: String, trim: true, required: true },
+        usedTech: { type: String, trim: true, required: true },
+        gitHubLink: { type: String, trim: true },
+        projectPic: { type: String, trim: true }
     },
     {
         timestamps: true

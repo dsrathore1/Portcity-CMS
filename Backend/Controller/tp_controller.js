@@ -30,20 +30,15 @@ export const getOneData = async (req, res) => {
 //! Create Document and push it to the DB.
 export const addProject = async (req, res) => {
 
-    const { projectName, usedTech } = req.body;
-    const postData = await tpModel({
-        projectName: projectName,
-        usedTech: usedTech
-    });
-
+    const data = req.body;
+    const postData = await tpModel(data);
     try {
-
-        // console.log({ projectName, usedTech });
+        console.log(postData);
         await postData.save();
 
         res.status(200).json({
             message: "Your data is Successfully added to the database.",
-            data: { projectName, usedTech }
+            data: postData
         });
 
     } catch (error) {
