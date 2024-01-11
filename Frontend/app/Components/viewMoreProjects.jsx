@@ -29,7 +29,7 @@ export default function ViewMP() {
     return (
         <>
             <div className="p-5">
-                <h1 className={`${br.className} font-thin text-4xl uppercase`}>More Projects 🌳</h1>
+                <h1 className={`${br.className} font-thin text-4xl uppercase select-none`}>More Projects 🌳</h1>
                 <div className="mt-6 flex flex-wrap gap-20 justify-center items-center">
                     {
                         data.map((data, index) => {

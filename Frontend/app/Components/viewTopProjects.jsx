@@ -12,6 +12,7 @@ const br = Barlow({
 
 export default function ViewTP() {
     const [data, setData] = useState([]);
+
     //! Fetching all the data from the backend
     const getData = async () => {
         await fetch("http://localhost:3001/topProjects", {
@@ -39,16 +40,15 @@ export default function ViewTP() {
         <>
             <div className="p-5">
                 <div className="flex items-center justify-between">
-                    <h1 className={`${br.className} font-thin text-4xl uppercase`}>Top Projects 🏡</h1>
+                    <h1 className={`${br.className} font-thin text-4xl uppercase select-none`}>Top Projects 🏡</h1>
                     <button onClick={deleteAllData} className="transition-all ease-in-out duration-500 active:translate-y-1"><MdDelete className="text-4xl transition-all ease-in-out duration-500 cursor-default hover:text-red-600" /></button>
                 </div>
                 <div className="mt-6 flex flex-wrap gap-20 justify-center items-center">
                     {
                         data.map((data) => {
-                            // const tech = data.usedTech;
-                            // const techs = tech.join(', ');
+                            const id = data._id
                             return (
-                                <Box key={data._id} image_name={NetflixClone} project_name={data.projectName} project_techs={data.usedTech} />
+                                <Box key={data._id} id={id} image_name={NetflixClone} project_name={data.projectName} project_techs={data.usedTech} />
                             );
                         })
                     }

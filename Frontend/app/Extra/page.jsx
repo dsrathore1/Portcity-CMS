@@ -7,21 +7,23 @@ const Extra = () => {
     const [showData, setShowData] = useState([]);
 
     async function getData() {
-        await fetch("http://localhost:3001/topProjects", {
+        await fetch("http://localhost:3001/moreProjects", {
             method: 'GET'
-        }).then((data) => data.json()).then((res) => {
-            // console.log(res.data);
+        })
+        .then((data) => data.json())
+        .then((res) => {
+            console.log(res);
             setData(res.data);
         });
     }
 
     async function getDataById(id) {
-        await fetch(`http://localhost:3001/findOne/${id}`, {
+        await fetch(`http://localhost:3001/moreProjects/getOneMp/${id}`, {
             method: 'GET'
         })
             .then((res) => res.json())
             .then((data) => {
-                // console.log(data.data)
+                console.log(data.data)
                 setShowData(data.data);
             });
     }
@@ -49,7 +51,7 @@ const Extra = () => {
                 })
             }
             {
-                showData.projectName
+                <h1>{showData.projectName}</h1>
             }
         </div>
     )
