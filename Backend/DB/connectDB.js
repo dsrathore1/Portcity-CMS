@@ -6,7 +6,7 @@ dotenv.config({ path: "./.env" });
 const connectDB = async () => {
     try {
         const { connection } = await mongoose.connect(process.env.MONGODB_URI, {
-            dbName: "UC-DB"
+            dbName: "Portcity-DB"
         }, {
             useNewUrlParser: true,
             useUnifiedTopology: true

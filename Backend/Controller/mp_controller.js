@@ -76,3 +76,14 @@ export const deleteAllMoreProjects = async (req, res) => {
         if (error) throw error;
     }
 }
+
+//! Delete one projects from more projects section 
+export const deleteOneMp = async (req, res) => {
+    const { id } = req.params;
+    try {
+        await mpProjects.deleteOne({ _id: id });
+        res.status(201).send("Deleted Successfully");
+    } catch (error) {
+        if (error) throw error;
+    }
+} 

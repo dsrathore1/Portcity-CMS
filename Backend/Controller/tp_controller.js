@@ -33,7 +33,7 @@ export const addProject = async (req, res) => {
     const data = req.body;
     const postData = await tpModel(data);
     try {
-        console.log(postData);
+        // console.log(postData);
         await postData.save();
 
         res.status(200).json({

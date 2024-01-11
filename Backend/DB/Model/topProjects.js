@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const Schema = await mongoose.Schema(
+const TpSchema = await mongoose.Schema(
     {
         projectName: { type: String, trim: true, required: true },
         usedTech: { type: String, trim: true, required: true },
@@ -12,6 +12,6 @@ const Schema = await mongoose.Schema(
     }
 );
 
-const tpModel = mongoose.models.topProjects || new mongoose.model("topProject", Schema);
+const tpModel = mongoose.models.topProjects || new mongoose.model("topProject", TpSchema);
 
 export default tpModel;
