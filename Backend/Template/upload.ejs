@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <!-- <link rel="icon" type="image/x-icon" href="../../Frontend/app/favicon.ico"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-white uppercase bg-[#14131A] h-screen w-full">
+    <h1 class="text-center text-4xl font-bold py-5 tracking-wide">🎇Upload a Image🎇</h1>
+    <p class="text-lg tracking-wider text-center">Upload a image for testing</p>
+    <form action="/upload" method="POST" enctype="multipart/form-data" class="h-[80vh] w-full flex flex-col justify-center items-center gap-10">
+        <input class="border-2 text-2xl border-white cursor-pointer rounded-md py-3 px-4" type="file" name="image">
+        <button class="py-3 px-10 bg-white text-black rounded-md font-semibold text-lg">Upload 🎁</button>
+    </form>
+</body>
+
+</html>

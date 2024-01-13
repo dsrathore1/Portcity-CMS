@@ -4,6 +4,11 @@ import { addMoreProject, deleteAllMoreProjects, getAllMoreProjects, updateOne, g
 
 const routes = Router();
 
+//! Main Route/Home route
+routes.get("/", function(req, res){
+    res.render("index.ejs");
+});
+
 //! Get Top Project API
 routes.get("/topProjects", getAllTopProjects);
 routes.get("/topProjects/findOne/:id", getOneData);
