@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon main.js",
-    "start": "nodemon main.js"
+    "start": "node main.js",
+    "timeout": "sleep 5"
   },
   "keywords": [
     "NODEJS",
@@ -15,9 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@dsrathore1/frontend": "*",
     "axios": "^1.6.2",
-    "cloudinary": "^1.41.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
