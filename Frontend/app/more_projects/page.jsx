@@ -1,7 +1,5 @@
 "use client"
-
 import React from "react";
-
 
 const more_projects = () => {
     const addData = async (e) => {
@@ -22,7 +20,7 @@ const more_projects = () => {
     return (
         <>
             <div className="h-screen w-full pl-[15rem] flex justify-center items-center">
-                <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+                <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800 w-full">
                     <h2 className="text-3xl font-semibold text-gray-700 capitalize dark:text-white">More Projects 🚀</h2>
 
                     <form onSubmit={addData} method="POST">
@@ -31,7 +29,6 @@ const more_projects = () => {
                                 <label className="text-gray-700 dark:text-gray-200" htmlFor="projectName">Project Name</label>
                                 <input name="projectName" id="projectName" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                             </div>
-
                             <div>
                                 <label className="text-gray-700 dark:text-gray-200" htmlFor="usedTech">Add Technology</label>
                                 <input name="usedTech" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
@@ -44,7 +41,7 @@ const more_projects = () => {
 
                             <div>
                                 <label className="text-gray-700 dark:text-gray-200" htmlFor="uploadPhotos">Upload Project Image</label>
-                                <input id="projectPic" type="file" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                                <input id="projectPic" type="url" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                             </div>
                         </div>
 
